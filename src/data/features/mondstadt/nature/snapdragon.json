@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "As a spice, it can bring a wonderful flavor to dishes. Used in Recipes."
+    "en": "As a spice, it can bring a wonderful flavor to dishes. Used in Recipes.", 
+    "ru": "Можно использовать в пищу, если правильно приготовить, а в качестве приправы подойдёт к любому блюду. Используется в Рецептах."
   },
   "enabled": true,
   "cluster": "on",
