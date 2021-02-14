@@ -6,7 +6,8 @@
     "ru": "Яйцо"
   },
   "description": {
-    "en": "A versatile food used in various Recipes."
+    "en": "A versatile food used in various Recipes.", 
+    "ru": "Универсальные ингредиен, содержащий в себе дневную дозу протеина. Используется в Рецептах."
   },
   "enabled": true,
   "cluster": "on",
