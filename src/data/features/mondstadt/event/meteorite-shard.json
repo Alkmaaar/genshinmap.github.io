@@ -2,10 +2,12 @@
   "format": 2,
   "name": {
     "en": "Meteorite Shard",
-    "pt": "Fragmento de Meteorito"
+    "pt": "Fragmento de Meteorito", 
+    "ru": "Осколок метеорита"
   },
   "description": {
-    "en": "A collection of celestial energy that once comprised an adventurer's Constellation. Part of the Unreconciled Stars event."
+    "en": "A collection of celestial energy that once comprised an adventurer's Constellation. Part of the Unreconciled Stars event.", 
+    "ru": "Собирайте божественную энергию, которая однажды была в Созвездии путешественника. Часть события Заблудшие звезды."
   },
   "enabled": true,
   "cluster": "on",
@@ -28,10 +30,12 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #1"
+        "en": "Where Stars Fall #1", 
+        "ru": "Где упали звёзды #1"
       },
       "popupContent": {
-        "en": "This shard is located on the back side of the island."
+        "en": "This shard is located on the back side of the island.", 
+        "ru": "Осколок расположен на задней стороне острова."
       },
       "popupMedia": "mondstadt/meteorite-shard/where-stars-fall-1"
     },
@@ -43,7 +47,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #2"
+        "en": "Where Stars Fall #2", 
+        "ru": "Где упали звёзды #2"
       },
       "popupContent": {
         "en": "This shard is located on the ground by a rock formation."
@@ -58,7 +63,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #3"
+        "en": "Where Stars Fall #3", 
+        "ru": "Где упали звёзды #3"
       },
       "popupContent": {
         "en": "This shard is located high up on a cliff face."
@@ -73,7 +79,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #4"
+        "en": "Where Stars Fall #4", 
+        "ru": "Где упали звёзды #4"
       },
       "popupContent": {
         "en": "This shard is by the water's edge on a small ledge below the main ground level."
@@ -88,7 +95,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #5"
+        "en": "Where Stars Fall #5", 
+        "ru": "Где упали звёзды #5"
       },
       "popupContent": {
         "en": "This shard is located sticking out of the side of the cliff."
@@ -103,7 +111,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #6"
+        "en": "Where Stars Fall #6", 
+        "ru": "Где упали звёзды #6"
       },
       "popupContent": {
         "en": "This shard is located on top of a small pile of rocks at the bottom of the cliff."
@@ -118,7 +127,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #7"
+        "en": "Where Stars Fall #7", 
+        "ru": "Где упали звёзды #7"
       },
       "popupContent": {
         "en": "This shard is located midway up this cliff face."
@@ -133,7 +143,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #8"
+        "en": "Where Stars Fall #8", 
+        "ru": "Где упали звёзды #8"
       },
       "popupContent": {
         "en": "This shard is located on top of the Domain building."
@@ -148,7 +159,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #9"
+        "en": "Where Stars Fall #9", 
+        "ru": "Где упали звёзды #9"
       },
       "popupContent": {
         "en": "This shard is located midway up the cliff face, by some Electro slimes."
@@ -163,7 +175,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #10"
+        "en": "Where Stars Fall #10", 
+        "ru": "Где упали звёзды #10"
       },
       "popupContent": {
         "en": "This shard is located on the cliff wall above the Cryo Regisvine, but can be reached without climbing."
@@ -178,7 +191,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #11"
+        "en": "Where Stars Fall #11", 
+        "ru": "Где упали звёзды #11"
       },
       "popupContent": {
         "en": "This shard is located annoyingly high up the wall."
@@ -193,7 +207,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #12"
+        "en": "Where Stars Fall #12", 
+        "ru": "Где упали звёзды #12"
       },
       "popupContent": {
         "en": "This shard is located on the ground nestled near a chunk of ruins."
@@ -208,7 +223,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #13"
+        "en": "Where Stars Fall #13", 
+        "ru": "Где упали звёзды #13"
       },
       "popupContent": {
         "en": "This shard is located in the gap near the bottom of the seating area. Beware of the Ruin Guard here."
@@ -223,7 +239,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #22"
+        "en": "Where Stars Fall #22", 
+        "ru": "Где упали звёзды #22"
       },
       "popupContent": {
         "en": "This shard is located on a small island rock formation off the cliff."
@@ -238,7 +255,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #14"
+        "en": "Where Stars Fall #14", 
+        "ru": "Где упали звёзды #14"
       },
       "popupContent": {
         "en": "This shard is located AT THE TOP (not the bottom) of this cliff, just behind where the couple are at night."
@@ -253,7 +271,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #15"
+        "en": "Where Stars Fall #15", 
+        "ru": "Где упали звёзды #15"
       },
       "popupContent": {
         "en": "This shard is located near the top of this waterfall."
@@ -268,7 +287,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #16"
+        "en": "Where Stars Fall #16", 
+        "ru": "Где упали звёзды #16"
       },
       "popupContent": {
         "en": "This shard is located at the top of this rocky outcropping."
@@ -283,7 +303,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #17"
+        "en": "Where Stars Fall #17", 
+        "ru": "Где упали звёзды #17"
       },
       "popupContent": {
         "en": "This shard is located near the shore of this small pond."
@@ -298,7 +319,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #18"
+        "en": "Where Stars Fall #18", 
+        "ru": "Где упали звёзды #18"
       },
       "popupContent": {
         "en": "This shard is located up the rock face."
@@ -313,7 +335,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #19"
+        "en": "Where Stars Fall #19", 
+        "ru": "Где упали звёзды #19"
       },
       "popupContent": {
         "en": "This shard is located at the peak of the hut's roof."
@@ -328,7 +351,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #20"
+        "en": "Where Stars Fall #20", 
+        "ru": "Где упали звёзды #20"
       },
       "popupContent": {
         "en": "This shard is in the middle of the field, being inspected by hilichurls."
@@ -343,7 +367,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Where Stars Fall #21"
+        "en": "Where Stars Fall #21", 
+        "ru": "Где упали звёзды #21"
       },
       "popupContent": {
         "en": "This shard is located near the bottom, at the crevice of this cliff."
@@ -358,7 +383,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #1"
+        "en": "Starlit Cape Oath #1", 
+        "ru": "Метеориты Мыса Веры #1"
       },
       "popupContent": {
         "en": "This shard is located near the Shrine of Depths."
@@ -373,7 +399,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #2"
+        "en": "Starlit Cape Oath #2", 
+        "ru": "Метеориты Мыса Веры #2"
       },
       "popupContent": {
         "en": "This shard is at the bottom part of a rock formation."
@@ -388,7 +415,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #3"
+        "en": "Starlit Cape Oath #3", 
+        "ru": "Метеориты Мыса Веры #3"
       },
       "popupContent": {
         "en": "This shard is at the top of the sword graveyard structure, between the two pillars."
@@ -403,7 +431,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #4"
+        "en": "Starlit Cape Oath #4", 
+        "ru": "Метеориты Мыса Веры #4"
       },
       "popupContent": {
         "en": "This shard is up on the sniper's tower."
@@ -418,7 +447,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #5"
+        "en": "Starlit Cape Oath #5", 
+        "ru": "Метеориты Мыса Веры #5"
       },
       "popupContent": {
         "en": "This shard is in a rock formation at the side."
@@ -433,7 +463,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #6"
+        "en": "Starlit Cape Oath #6", 
+        "ru": "Метеориты Мыса Веры #6"
       },
       "popupContent": {
         "en": "This shard is on the ground, being inspected by several hilichurls."
@@ -448,7 +479,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #7"
+        "en": "Starlit Cape Oath #7", 
+        "ru": "Метеориты Мыса Веры #7"
       },
       "popupContent": {
         "en": "This shard is on a rock near some Electro Crystals."
@@ -463,7 +495,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #8"
+        "en": "Starlit Cape Oath #8", 
+        "ru": "Метеориты Мыса Веры #8"
       },
       "popupContent": {
         "en": "This shard is on a rock being inspected by an Abyss Mage."
@@ -478,7 +511,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #9"
+        "en": "Starlit Cape Oath #9", 
+        "ru": "Метеориты Мыса Веры #9"
       },
       "popupContent": {
         "en": "This shard is at the bottom of this cliff here."
@@ -493,7 +527,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #10"
+        "en": "Starlit Cape Oath #10", 
+        "ru": "Метеориты Мыса Веры #10"
       },
       "popupContent": {
         "en": "This one is by some rocks in the forested area."
@@ -508,7 +543,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #11"
+        "en": "Starlit Cape Oath #11", 
+        "ru": "Метеориты Мыса Веры #11"
       },
       "popupContent": {
         "en": "This one is nestled among some rocks."
@@ -523,7 +559,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #12"
+        "en": "Starlit Cape Oath #12", 
+        "ru": "Метеориты Мыса Веры #12"
       },
       "popupContent": {
         "en": "This shard is AT THE TOP OF THE CLIFF. You can glide up here using the gust that takes you up to the portal. Don't spend 10 minutes searching for it at ground level."
@@ -538,7 +575,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #13"
+        "en": "Starlit Cape Oath #13", 
+        "ru": "Метеориты Мыса Веры #13"
       },
       "popupContent": {
         "en": "This shard is located at the edge of the far cliff here. Wei appears here sometimes."
@@ -553,7 +591,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #14"
+        "en": "Starlit Cape Oath #14", 
+        "ru": "Метеориты Мыса Веры #14"
       },
       "popupContent": {
         "en": "This one is at the base of a small ledge."
@@ -568,7 +607,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #15"
+        "en": "Starlit Cape Oath #15", 
+        "ru": "Метеориты Мыса Веры #15"
       },
       "popupContent": {
         "en": "This one is at the top of an old ruin. Glide here from the nearby cliff."
@@ -583,7 +623,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #16"
+        "en": "Starlit Cape Oath #16", 
+        "ru": "Метеориты Мыса Веры #16"
       },
       "popupContent": {
         "en": "This one is on a pile of rubble near the village."
@@ -598,7 +639,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #17"
+        "en": "Starlit Cape Oath #17", 
+        "ru": "Метеориты Мыса Веры #17"
       },
       "popupContent": {
         "en": "This one is at the top of the large wooden throne structure."
@@ -613,7 +655,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #18"
+        "en": "Starlit Cape Oath #18", 
+        "ru": "Метеориты Мыса Веры #18"
       },
       "popupContent": {
         "en": "This one is on a rock being inspected by some hilichurls. It's kinda in the bushes."
@@ -628,7 +671,8 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Starlit Cape Oath #19"
+        "en": "Starlit Cape Oath #19", 
+        "ru": "Метеориты Мыса Веры #19"
       },
       "popupContent": {
         "en": "This one is on the branches of the tree in the center pond."
