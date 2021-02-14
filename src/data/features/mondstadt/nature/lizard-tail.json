@@ -1,6 +1,7 @@
 {
   "description": {
-    "en": "A lizard tail that curled up after losing its owner. Used in Alchemy."
+    "en": "A lizard tail that curled up after losing its owner. Used in Alchemy.", 
+    "ru": "Свернувшийся хвост ящерицы. Очень горький, но обладает свойствами, укрепляющие кожу. Используется в Алхимии."
   },
   "enabled": true,
   "cluster": "on",
