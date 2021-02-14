@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "A healthy and nutritious vegetable that is sweet to the taste. Used in various recipes."
+    "en": "A healthy and nutritious vegetable that is sweet to the taste. Used in various recipes.", 
+    "ru": "Здоровый и питательный овощ, который легко вырастить. Используется в различных Рецептах."
   },
   "enabled": true,
   "cluster": "on",
