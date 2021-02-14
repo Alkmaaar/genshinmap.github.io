@@ -6,7 +6,8 @@
     "ru": "Подземелья"
   },
   "description": {
-    "en": "Complete the challenges to earn Artifact, Weapon Ascension, or Talent Level-Up rewards."
+    "en": "Complete the challenges to earn Artifact, Weapon Ascension, or Talent Level-Up rewards.", 
+    "ru": "Завершите испытания, чтобы заработать Артефакты, материалы Возвышение Оружия или Талантов."
   },
   "enabled": true,
   "cluster": "off",
