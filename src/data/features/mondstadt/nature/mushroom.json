@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "Hardy common fungi. Used in Recipes."
+    "en": "Hardy common fungi. Used in Recipes.", 
+    "ru": "Обычный гриб. Такие растут по всему Тейвату в тёмных местах с повышенной влажностью. Используется в Рецептах."
   },
   "enabled": true,
   "cluster": "on",
