@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "The stamen of a fiercely burning flower. Harvest using a Hydro skill. Used in Alchemy."
+    "en": "The stamen of a fiercely burning flower. Harvest using a Hydro skill. Used in Alchemy.", 
+    "ru": "Пылающий ярким огнём цветок. Даже будучи потушенным, он всё равно продолжает испускать тепло. Можно собрать, использую Гидро или Крио умения. Используется в Алхимии."
   },
   "enabled": true,
   "cluster": "on",
