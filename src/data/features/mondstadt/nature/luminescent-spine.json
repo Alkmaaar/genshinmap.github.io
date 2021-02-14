@@ -1,6 +1,7 @@
 {
   "description": {
-    "en": "The light-emitting part of a firefly. Used in Alchemy."
+    "en": "The light-emitting part of a firefly. Used in Alchemy.", 
+    "ru": "Часть светлячка, которая испускает свет. Популярна среди влюблённых и в качестве медицинского препарата. Используется в Алхимии."
   },
   "enabled": true,
   "cluster": "on",
