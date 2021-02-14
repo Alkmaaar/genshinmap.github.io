@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "A wild grass that emits light at night. Used in Recipes and Character Ascension."
+    "en": "A wild grass that emits light at night. Used in Recipes and Character Ascension.", 
+    "ru": "Дикая трава, испускающая тусклый свет в ночи. Используется в качестве приправы к блюдам, в Рецептах и для Вознесения персонажей."
   },
   "enabled": true,
   "cluster": "on",
