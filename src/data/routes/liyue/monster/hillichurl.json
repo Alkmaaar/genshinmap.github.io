@@ -1,53 +1,59 @@
 {
-  "name": { "en": "Hilichurl Camps" },
+  "format": 2,
+  "description": {
+    "en": "Efficiently navigates between several Hilichurl camps, to easily collect masks and arrowheads."
+  },
+  "enabled": true,
+  "name": {
+    "en": "Hilichurl Camps",
+    "pt": "Acampamentos Hilichurl"
+  },
   "icons": {
     "filter": "hilichurl"
   },
   "data": [
     {
-      "id": 1,
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [-52.16045455774705, 54.74487304687501],
-          [-52.146973340644706, 56.54663085937501],
-          [-52.58302586141648, 58.20556640625001],
-          [-53.0478179591147, 59.79858398437501],
-          [-52.274880130680536, 59.53491210937501]
-        ]
+      "coordinates": [
+        [-43.72499, 39.07969],
+        [-43.70937, 40.36094],
+        [-44.21719, 41.54063],
+        [-44.76406, 42.67343],
+        [-43.85781, 42.48594]
+      ],
+      "id": "CDB25F0AF54BA111540792441212D561FFB5364B",
+      "importIds": {
+        "gm_legacy": ["liyueHillichurl/1"]
       },
-      "type": "Feature",
-      "properties": {
-        "popupTitle": { "en": "#1: Guyun Stone Forest" },
-        "popupContent": {
-          "en": "This route takes you through several Hilichurl camps, with 17 Hilichurls, 6 Hilichurl Shooters, 4 Samachurls, and 4 Mitachurls."
-        },
-        "popupMedia": ""
+      "popupAttribution": "Unknown",
+      "popupTitle": {
+        "en": "#1: Guyun Stone Forest"
+      },
+      "popupContent": {
+        "en": "This route takes you through several Hilichurl camps, with 17 Hilichurls, 6 Hilichurl Shooters, 4 Samachurls, and 4 Mitachurls."
       }
     },
     {
-      "id": 2,
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [-36.20882309283712, 37.8424072265625],
-          [-35.643905237877306, 38.39172363281251],
-          [-35.8623437348965, 37.36999511718751],
-          [-36.92793899776677, 37.59521484375001],
-          [-36.51405119943165, 39.41894531250001],
-          [-37.89219554724435, 38.42468261718751],
-          [-37.05956083025124, 35.62866210937501],
-          [-36.998165657002275, 33.95324707031251],
-          [-36.27085020723904, 34.55749511718751]
-        ]
+      "coordinates": [
+        [-27.75625, 27.06016],
+        [-27.26016, 27.45078],
+        [-27.45156, 26.72422],
+        [-28.39297, 26.88437],
+        [-28.02578, 28.18125],
+        [-29.25625, 27.47422],
+        [-28.51016, 25.48594],
+        [-28.45547, 24.29453],
+        [-27.81094, 24.72422]
+      ],
+      "id": "34D6FC4D055B488A9CD44F4776F70CF3CA4AF39E",
+      "importIds": {
+        "gm_legacy": ["liyueHillichurl/2"]
       },
-      "type": "Feature",
-      "properties": {
-        "popupTitle": { "en": "#2 Wuwang Hill" },
-        "popupContent": {
-          "en": "This route winds through Wuwang Hill, providing 19 Hilichurls, 13 Hilichurl Shooters,  1 Samachurl, and 3 Mitachurls."
-        },
-        "popupMedia": ""
+      "popupAttribution": "Unknown",
+      "popupTitle": {
+        "en": "#2 Wuwang Hill"
+      },
+      "popupContent": {
+        "en": "This route winds through Wuwang Hill, providing 19 Hilichurls, 13 Hilichurl Shooters,  1 Samachurl, and 3 Mitachurls."
       }
     }
   ]

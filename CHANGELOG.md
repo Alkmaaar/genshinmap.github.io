@@ -581,7 +581,7 @@ First major release of the rework, featuring a new interface developed in React.
 - Fixed a bug where markers listed in the editor Elements tab would start at the 0th index.
 - Fixed a bug where popup titles and content would display as `[object Object]`
 
-# 0.10.0 Marker Data Format Rework
+# [ALPHA] 0.10.0 Marker Data Format Rework
 
 - Marker data is now stored in a new format which will make the importing of new features easier.
   - TODO: Old completion data currently is not migrated, it's just sitting hidden in the user's data. Add functionality to migrate by IDs.
@@ -638,7 +638,7 @@ First major release of the rework, featuring a new interface developed in React.
     - popup-import-new-content
 - Completed markers now display with a green highlight to distinguish them when opacity is 1.
 
-# 0.10.1 Yuanshen Import and Debug View
+# [ALPHA] 0.10.1 Yuanshen Import and Debug View
 
 - Added new map Debug view, which can be enabled in the Options. Currently only displays the coordinates at the cursor but more info can be implemented in the future.
 - Added a new description field for features and routes. This is a one or two sentence explanation of the feature or route.
@@ -715,7 +715,7 @@ First major release of the rework, featuring a new interface developed in React.
 - Fixed a bug where new version markers could not be double clicked to mark as completed.
 - Fixed several bugs with rendering of clustered markers.
 
-# 0.10.2 Permalinks, Notifications, and Imports
+# [ALPHA] 0.10.2 Permalinks, Notifications, and Imports
 
 - Added functionality to navigate to a marker via permalink.
 - Added a button to popups to copy the permalink.
@@ -839,3 +839,156 @@ First major release of the rework, featuring a new interface developed in React.
 - Fixed a bug where the Completed switch's status would not match the state of the marker.
 - Fixed a bug where navigating via permalink would not display the feature if it was currently hidden.
 - Fixed a bug where opening of a popup when the category has no completed markers would cause a crash.
+
+# [ALPHA] 0.10.3 Chest Imports and Route Migration
+
+- The v0.10.0 versions have been notated as ALPHA versions. Marker data is not currently migrated from older versions of the map which use different IDs for markers. Please test them to ensure proper functionality but be aware that there may be issues if you use these versions to store progress.
+- Map Debug View now includes a text field. Pasting a partial or full marker ID here will locate and navigate to it on the map.
+- Help menu now displays a count of markers and routes in the first paragraph.
+- Fixed a bug causing routes to not render properly.
+- Redid the map graphics to undo an optimization which lowered overall quality at higher zoom levels.
+- Fixed an issue where the map seams were visible on higher zoom levels.
+- JSON files (including I18N and features) have been replaced with JSONC files.
+  - JSONC is a format which is a variant of JSON, which allows for single-line and multi-line comments.
+  - Added a Webpack loader to handle converting these JSONC files to JSON objects.
+- Disabled features due to lack of data.
+  - Hilichurl (Mondstadt)
+  - Hilichurl Shooter (Mondstadt)
+  - Hilichurl Shooter (Liyue)
+  - Stonehide Lawachurl (Liyue)
+  - Fish (Mondstadt)
+- Migrated routes.
+  - Cecilia (Mondstadt)
+  - Loach Pearl (Liyue)
+  - Bamboo Shoot (Liyue)
+  - Hilichurl (Liyue)
+  - Artifacts (Liyue)
+- Migrated 1,441 markers.
+  - Matsutake (Mondstadt): Migrated 32 markers.
+  - Matsutake (Liyue): Migrated 9 markers.
+  - Hilichurl (Liyue): Migrated 2 markers.
+  - Common Chest (Mondstadt): Migrated 225 markers, and added Yuanshen.site import IDs.
+  - Exquisite Chest (Mondstadt): Migrated 202 markers, and added Yuanshen.site import IDs.
+  - Precious Chest (Mondstadt): Migrated 9 markers, and added Yuanshen.site import IDs.
+  - Luxurious Chest (Mondstadt): Migrated 9 markers, and added Yuanshen.site import IDs.
+  - Common Chest (Liyue): Migrated 535 markers, and added Yuanshen.site import IDs.
+  - Exquisite Chest (Liyue): Migrated 327 markers, and added Yuanshen.site import IDs.
+  - Precious Chest (Liyue): Migrated 70 markers, and added Yuanshen.site import IDs.
+  - Luxurious Chest (Liyue): Migrated 21 markers, and added Yuanshen.site import IDs.
+- Imported 307 new markers.
+  - Note: Many of these Common Chests are actually higher rarities, since they could not be sorted automatically.
+  - Common Chest (Mondstadt): Imported 41 new chests from Yuanshen.site.
+  - Common Chest (Dragonspine): Imported 226 new chests from Yuanshen.site.
+  - Common Chest (Liyue): Imported 40 new chests from Yuanshen.site.
+- Localization key changes:
+  - Modified keys:
+    - map-about-help-content-a: Now gives a general description of the app and a counter of markers and routes.
+
+# [ALPHA] v0.10.4 Data Migration
+
+- Added user preferences migration to move user completion data to the new marker storage format.
+  - Completion from v0.9 was previously not visible in v0.10.
+- Fixed a bug where the map was using Spherical Mercator projection, causing distances farther from the origin to be skewed.
+  - Apparently the mapping library the site uses defaults to assuming you're displaying a map of Earth, and therefore calculates distances as thought the map were based on a sphere.
+  - This required making a script to realign all the points on the map. If any of them seem skewed, please make an issue requesting a correction.
+- Redid importer for Yuanshen.site to work with new marker storage format.
+- Update the Editor to place markers in MSFv2 format.
+  - Added Description field to Editor Submission.
+- Updated localization files:
+  - meta-page-title-full: Removed [BETA] tag to make the title more concise
+  - popup-submit-editor-data-description: 
+
+# 0.10.5 Finalized v0.10 Release
+
+Here is a summary of major changes from v0.10.0-v0.10.4:
+- All Crimson Agates now have text descriptions and YouTube embeds.
+- Imported over 2,500 markers from Yuanshen.site, including chests from Dragonspine.
+  - Note that since Yuanshen.site does not distinguish between chest rarities by default, these still need to be sorted.
+- Markers submitted via the editor are now much easier to add to the main site.
+- Performed some of the backend work required to implement importers for AppSample and MapGenie.
+- Popups now display a switch to enable/disable completion status.
+- Added functionality to convey information to the user via "toast" notifications in the bottom-left corner.
+- Markers and routes can now be navigated to directly via hyperlink.
+  - The feature of the linked marker will be made visible if it isn't already.
+  - Popups now include a button to copy a hyperlink to the clipboard.
+- Added new Map Debug view (available to enable in the options) which displays the coordinates at the cursor.
+
+# 0.10.6 Minor Bug Fixes
+
+- Fixed an issue that prevented the page from building properly.
+- Fixed an issue that caused the page from displaying as a blank white screen.
+
+# 0.10.7 Changelog Tab and Translations
+- Added a changelog tab to display partial information from this document in the app.
+- Made improvements to error reporting.
+  - The GitHub crash reporter will now attempt to export the user's current preferences and add them to the issue template.
+  - The GitHub crash reporter will now apply a sourcemap to the stack trace, if available
+    - NOTE: Make sure that sourcemaps are available on Netlify. This may require a Webpack change.
+  - These changes should help in the task of replicating and resolving issues.
+- Localization changes:
+  - map-controls-tab-changelog: The name of the Changelog tab in the interface.
+- Imported translations as provided via GitHub:
+  - @Alkmaaar: Translated several Mondstadt features.
+  - @xRitax: Translated Andrius to Japanese.
+  - @luanvilarim: Translated many features to Portuguese. 
+- Cleaned up and reformatted feature and route files.
+- Fixed some warnings which appeared in the browser console.
+  - The `MouseEvent.mozPressure is deprecated` issue cannot be resolved and should be ignored. See: https://github.com/Leaflet/Leaflet/issues/3943
+- Fixed a bug where, in certain languages, some features would display with blank names.
+
+# 0.10.8 More Fixes
+
+- Editor data is now migrated to MSFv2.
+  - Incremented preferences version to GM_007.
+- Added localization strings:
+  - editor: The name of the Editor.
+  - message-editor-import-success: The popup which appears when importing Editor data.
+  - error-handler-component-message: The message displayed on the Component error handler, where {component} will be replaced with the translated name of the specific component which failed.
+- Fixed an issue where many markers had not had their images imported.
+  - This imports over 300 chest and other images from Yuanshen.site.
+- Hid AppSample and MapGenie importers (they are still in development).
+- Fixed a bug which caused a "can't use useLeafletContext() outside a MapContainer" error.
+  - Ported from NPM to Yarn to allow forcing dependency resolution.
+  - There's a bug which prevents upgrading to berry.
+- Fixed a bug where routes would change color when placed.
+  - This is part of an upcoming feature which will allow recoloring routes.
+- Even more improved error handling and reporting.
+  - Created a component error wrapper, currently applied to the Editor tab of the Map controls. If it crashes, only that part of the UI will display the error handler.
+- Fixed an issue where test markers appeared on the corners of the map.
+- Made additions and modifications to existing markers:
+  - @specklet: Added new images and descriptions for 13 chests around Stormbearer Point.
+
+# 0.10.9
+
+- Fixed the category buttons in the feature tap not using material components.
+- Updated the following features:
+  - Mondstadt (Domain): Cleaned up the positions to be more accurate.
+  - Mondstadt (Statue of the Seven): Cleaned up the positions to be more accurate.
+  - [ ] Mondstadt (Teleporter):
+  - [ ] Mondstadt (Shrine):
+  - [ ] Liyue (Domain):
+  - [ ] Liyue (Statue):
+  - [ ] Liyue (Teleporter):
+  - [ ] Liyue (Shrine):
+  - [ ] Mondstadt Bosses
+    - [ ] Positions
+    - [ ] Descriptions
+  - [ ] Liyue Bosses
+    - [ ] Positions
+    - [ ] Descriptions
+- [ ] World Border fixes
+- [ ] Map Graphic changes
+- [ ] Editor route editing fix
+- Fixed some issues with routes in the editor.
+- Fixed a bug where opening a marker popup would reset the completion time.
+- Fixed a bug where the editor would output bad coordinates.
+
+
+
+- Removed the "Cluster Markers" option from the editor submission form.
+- Created localization keys:
+  - social-visit-github: Visit us on GitHub
+  - social-visit-discord: Visit us on Discord
+- Removed localization keys:
+  - popup-submit-editor-data-subtitle-b
+  - popup-submit-editor-data-cluster-markers

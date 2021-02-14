@@ -11,11 +11,11 @@ import { GeoJSON, useMapEvents } from 'react-leaflet';
 import { connect } from 'react-redux';
 
 import { localizeField } from '~/components/i18n/FeatureLocalization';
-import { DEFAULT_ZOOM } from '~/components/preferences/DefaultPreferences';
+import { DEFAULT_ZOOM } from '~/components/views/map/LayerConstants';
 import { hashObject } from '~/components/Util';
 
 // The data file which contains the information on the region label markers.
-const regionLabelData = require('~/data/core/map-labels.json');
+const regionLabelData = require('../../../../data/core/map-labels.json');
 
 const useStyles = makeStyles((_theme) => ({
   regionLabelMarker: {
@@ -49,7 +49,7 @@ const RegionLabel = ({ featureData, zoomLevel }) => {
    */
   const style = {
     fontSize: `${zoomLevel * 0.25}em`,
-    '-webkit-text-stroke': `${zoomLevel * 0.125}px black`,
+    WebkitTextStroke: `${zoomLevel * 0.125}px black`,
     textStroke: `${zoomLevel * 0.125}px black`,
     top: `-${zoomLevel * 2}px`,
   };

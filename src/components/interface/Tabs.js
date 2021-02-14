@@ -7,7 +7,7 @@ import {
   useTheme,
 } from '@material-ui/core';
 import React from 'react';
-import { useDebouncedState, CloneProps } from '../Util';
+import { useDebouncedState, CloneProps } from '~/components/Util';
 
 const useStyles = makeStyles((_theme) => ({
   tab: { minWidth: 0 },
@@ -108,6 +108,7 @@ export const TabBar = ({
         ) : (
           <MaterialTab
             wrapped
+            key={tab.value}
             label={tab.label}
             value={tab.value}
             classes={{ root: classes.tab }}

@@ -1,7 +1,11 @@
 {
-  "name": { "en": "Fatui Pyro Agent", "ru": "Агент Фатуи" },
+  "format": 2,
+  "name": {
+    "en": "Fatui Pyro Agent",
+    "ru": "Агент Фатуи"
+  },
   "description": {
-    "en": "Agent of the Fatui who turn invisible to catch enemies off-guard. Drops Sacrificial Knife and Recruit's Insignia.", 
+    "en": "Agent of the Fatui who turn invisible to catch enemies off-guard. Drops Sacrificial Knife and Recruit's Insignia.",
     "ru": "Тайный Агент Фатуи, способен поймать врасплох, используя невидимость. Возможные награды: Царемониальный нож, Шеврон."
   },
   "enabled": true,
@@ -18,8 +22,8 @@
   },
   "data": [
     {
-      "coordinates": [-33.81957, 59.07211],
-      "id": "78370CAB0941D25964DD74505BBFCC1358C3E9CF",
+      "coordinates": [-25.68147, 42.15683],
+      "id": "0D79669535C3BB8EBDFD809B6F308281EA2A9923",
       "importIds": {
         "yuanshen": ["133_1"]
       },
@@ -29,7 +33,6 @@
       "popupContent": {
         "zh": "（我有理由怀疑这是个逃兵233）"
       },
-      "popupMedia": "https://yuanshen.site/comment_png/133_1.jpg",
       "popupAttribution": "Yuanshen.site"
     }
   ]

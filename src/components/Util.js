@@ -5,6 +5,9 @@ import objectHash from 'object-hash';
 import React from 'react';
 import sanitizeHTML from 'sanitize-html';
 
+// It gets added to window.
+import { mapStackTrace } from 'sourcemapped-stacktrace';
+
 import packageJson from '~/../package.json';
 
 export const canUseDOM = () => {
@@ -17,13 +20,36 @@ export const isDev = () => {
   if (typeof dev !== 'undefined') return dev;
 
   if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    console.debug('Running in development environment.');
+    console.debug('Running in development environment (LOCAL).');
+    dev = true;
+  } else if (process.env.BRANCH && process.env.BRANCH === 'develop') {
+    console.debug('Running in development environment (NETLIFY).');
     dev = true;
   } else {
     dev = false;
   }
 
   return dev;
+};
+
+/**
+ * Applies a sourcemap to a given stack trace.
+ * @param {*} stackTrace The stack trace to parse.
+ * @returns A Promise to parse the stack trace asynchronously.
+ */
+export const applySourcemapToStackTrace = (stackTrace) => {
+  return new Promise((resolve, _reject) => {
+    mapStackTrace(
+      stackTrace,
+      (mappedStack) => {
+        const joinedStack = mappedStack.join('\n');
+        resolve(joinedStack);
+      },
+      {
+        filter: (_line) => true,
+      }
+    );
+  });
 };
 
 /**
@@ -69,6 +95,7 @@ export const hashObject = (input, options) => {
       unorderedArrays: false,
       unorderedSets: true,
       unorderedObjects: true,
+      upperCase: true,
       ...options,
     };
 
@@ -84,7 +111,16 @@ export const hashObject = (input, options) => {
       console.debug(output);
     }
     // Actually return the hash.
-    return objectHash(input, fullOptions);
+    let result = objectHash(input, fullOptions);
+
+    // Convert to uppercase.
+    if (fullOptions.upperCase) result = result.toUpperCase();
+
+    // Print the result.
+    if (fullOptions.debug) console.debug(result);
+
+    // Return the result.
+    return result;
   } catch (err) {
     console.error(input);
     const output = new Error('Unable to hash object, did an input leak?');
@@ -274,3 +310,25 @@ export const useDebouncedState = (defaultValue, onStateChanged, debounce = 300) 
  * @param {*} children A function which takes the other props passed to this component as an argument.
  */
 export const CloneProps = ({ children, ...other }) => children(other);
+
+// Depending on the file type being imported, the main value desired
+// may or may not be in the .default property.
+// JSON isn't and JSONC is, for example.
+export const importFromContext = (context, key) => {
+  try {
+    const importedModule = context(key);
+    if (_.isEqual(_.keys(importedModule), ['default'])) {
+      return importedModule.default;
+    }
+
+    return importedModule;
+  } catch (err) {
+    console.warn(`WARNING: Could not load module ${key}.`);
+    console.warn(err);
+    return null;
+  }
+};
+
+export const truncateFloat = (value, decimals = 0) => {
+  return Math.trunc(value * 10 ** decimals) / 10 ** decimals;
+};

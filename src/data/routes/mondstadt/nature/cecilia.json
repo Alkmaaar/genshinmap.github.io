@@ -1,38 +1,45 @@
 {
-  "name": { "en": "Cecilia" },
+  "format": 2,
+  "description": {
+    "en": "An efficient route which allows gathering all the Cecilia flowers in the area."
+  },
+  "enabled": true,
+  "name": {
+    "en": "Cecilia",
+    "pt": "Cecília"
+  },
   "icons": {
     "filter": "cecilia"
   },
   "data": [
     {
-      "id": 1,
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [-24.211899678553248, 69.19189453125001],
-          [-23.679743598599696, 69.69177246093751],
-          [-23.649556122147732, 70.25207519531251],
-          [-23.589160275994917, 70.58715820312501],
-          [-23.079731762449878, 70.07080078125001],
-          [-23.32712425459329, 69.84008789062501],
-          [-23.02918734674459, 69.14794921875001],
-          [-22.39071391683855, 69.32922363281251],
-          [-22.715390019335942, 69.81811523437501],
-          [-22.603868842895686, 70.19714355468751],
-          [-22.019453218696597, 69.88952636718751],
-          [-21.58593511478851, 69.85107421875001],
-          [-21.427503474404094, 70.18066406250001],
-          [-21.432616864477335, 70.51574707031251],
-          [-23.905926927314724, 71.75170898437501]
-        ]
+      "coordinates": [
+        [-17.85391, 49.35312],
+        [-17.43984, 49.70859],
+        [-17.41641, 50.10703],
+        [-17.36953, 50.34531],
+        [-16.975, 49.97812],
+        [-17.1664, 49.81406],
+        [-16.93594, 49.32188],
+        [-16.44375, 49.45078],
+        [-16.69375, 49.79844],
+        [-16.60781, 50.06797],
+        [-16.15859, 49.84922],
+        [-15.82657, 49.82187],
+        [-15.70547, 50.05625],
+        [-15.70938, 50.29453],
+        [-17.61563, 51.17344]
+      ],
+      "id": "41B8A1E92DC49FB157BE8A516FC9925FB2EEED88",
+      "importIds": {
+        "gm_legacy": ["mondstadtCecilia/1"]
       },
-      "type": "Feature",
-      "properties": {
-        "popupTitle": { "en": "Cecilias" },
-        "popupContent": {
-          "en": "Cecilias are located around Starsnatch Cliff to the north of the Temple of Thousand Winds."
-        },
-        "popupMedia": ""
+      "popupAttribution": "MasterEric",
+      "popupTitle": {
+        "en": "Cecilias"
+      },
+      "popupContent": {
+        "en": "Cecilias are located around Starsnatch Cliff to the north of the Temple of Thousand Winds."
       }
     }
   ]

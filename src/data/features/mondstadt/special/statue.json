@@ -1,15 +1,16 @@
 {
   "format": 2,
-  "name": {
-    "en": "Statue of the Seven",
-    "ru": "Статуя семи Архонтов"
-  },
   "description": {
     "en": "Teleport here to receive healing or redeem elemental Oculi for rewards."
   },
   "enabled": true,
   "cluster": "off",
   "respawn": "none",
+  "name": {
+    "en": "Statue of the Seven",
+    "ru": "Статуя семи Архонтов",
+    "pt": "Estátua dos Sete"
+  },
   "icons": {
     "filter": "mondstadt-statue",
     "base": {
@@ -31,35 +32,62 @@
   },
   "data": [
     {
-      "coordinates": [-21.87041, 64.39773],
-      "id": "DBE65A0D6B2D523359B7A093DDF3E02720B4962A",
+      "coordinates": [
+        -15.97015,
+        45.91719
+      ],
+      "id": "697C91C7C041A1D3B4BC61E688A68446C77F4F57",
       "importIds": {
+        "gm_msfv2": ["266AC5D7050B88BC45FF36E5B562B5FD8CFC8DFB"],
         "gm_legacy": ["mondstadtStatue/1"]
       },
       "popupAttribution": "MasterEric",
-      "popupTitle": { "en": "Statue of The Seven - Anemo", "ru": "Статуя Анемо Архонта" },
-      "popupContent": { "en": "Starfell Valley, Mondstadt", "ru": "Долина Звездопадов, Мондштадт" },
+      "popupTitle": {
+        "en": "Statue of The Seven - Anemo",
+        "ru": "Статуя Анемо Архонта"
+      },
+      "popupContent": {
+        "en": "Starfell Valley, Mondstadt",
+        "ru": "Долина Звездопадов, Мондштадт"
+      },
       "popupMedia": "mondstadt/statue/starfell"
     },
     {
-      "coordinates": [-30.31839, 63.50373],
-      "id": "8CAB2694AD7B73D522394EA686CDD621381F7CF8",
+      "coordinates": [
+        -22.76553,
+        45.32665
+      ],
+      "id": "FA491161CE8E5B6CCB009C36A724EB7A6D5F5E65",
       "importIds": {
+        "gm_msfv2": ["16B0F36A04625C6E50E0FCAAB47D8A27E1C81A52"],
         "gm_legacy": ["mondstadtStatue/2"]
       },
       "popupAttribution": "MasterEric",
-      "popupTitle": { "en": "Statue of The Seven - Anemo", "ru": "Статуя Анемо Архонта" },
-      "popupContent": { "en": "Galesong Hill, Mondstadt", "ru": "Склон Песни ветра, Мондштадт" },
+      "popupTitle": {
+        "en": "Statue of The Seven - Anemo",
+        "ru": "Статуя Анемо Архонта"
+      },
+      "popupContent": {
+        "en": "Galesong Hill, Mondstadt",
+        "ru": "Склон Песни ветра, Мондштадт"
+      },
       "popupMedia": "mondstadt/statue/windrise"
     },
     {
-      "coordinates": [-31.12819, 53.42376],
-      "id": "B1F755AF88CDDD953D80CD3760215942F4976F5D",
+      "coordinates": [
+        -23.51130,
+        38.09538
+      ],
+      "id": "AA86941D1EB05529449F388C17795A751F53EE93",
       "importIds": {
+        "gm_msfv2": ["CD32EBA5001B7BEA3572EFFF1CFDCAA0FB9560AE"],
         "gm_legacy": ["mondstadtStatue/3"]
       },
       "popupAttribution": "MasterEric",
-      "popupTitle": { "en": "Statue of The Seven - Anemo", "ru": "Статуя Анемо Архонта" },
+      "popupTitle": {
+        "en": "Statue of The Seven - Anemo",
+        "ru": "Статуя Анемо Архонта"
+      },
       "popupContent": {
         "en": "Windwail Highland, Mondstadt",
         "ru": "Нагорье Ревущих ветров, Мондштадт"
@@ -67,13 +95,20 @@
       "popupMedia": "mondstadt/statue/springvale"
     },
     {
-      "coordinates": [-20.79207, 42.40584],
-      "id": "D3B15709480CA5CF2DF599E5D9F48E8B6AE14DDA",
+      "coordinates": [
+        -15.30221,
+        30.24539
+      ],
+      "id": "F8615210A0D841E7F51751A7C344D595BA77592B",
       "importIds": {
+        "gm_msfv2": ["F878EFE2F845591EDE26B9C09577669B568D4DDA"],
         "gm_legacy": ["mondstadtStatue/4"]
       },
       "popupAttribution": "MasterEric",
-      "popupTitle": { "en": "Statue of The Seven - Anemo", "ru": "Статуя Анемо Архонта" },
+      "popupTitle": {
+        "en": "Statue of The Seven - Anemo",
+        "ru": "Статуя Анемо Архонта"
+      },
       "popupContent": {
         "en": "Brightcrown Mountains, Mondstadt",
         "ru": "Горы Светлой короны, Мондштадт"

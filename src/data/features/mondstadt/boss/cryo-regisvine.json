@@ -1,31 +1,30 @@
 {
   "format": 2,
-  "name": {
-    "en": "Cryo Regisvine",
-    "ru": "Крио папоротник"
-  },
   "description": {
-    "en": "A monster formed from a vine that was imbued with the essence of biting frost within the Ley Lines. Drops Artifacts and Cryo Character Ascension Materials.", 
+    "en": "A monster formed from a vine that was imbued with the essence of biting frost within the Ley Lines. Drops Artifacts and Cryo Character Ascension Materials.",
     "ru": "Это чудовище появилось из отростка артерий земли, который впитал эссенцию пронизывающего холода. Выпадают Артефакты и материалы для возвышения Крио персонажей."
   },
   "enabled": true,
   "cluster": "off",
+  "name": {
+    "en": "Cryo Regisvine",
+    "ru": "Крио папоротник",
+    "pt": "Regisvine Cryo"
+  },
   "respawn": 180,
   "icons": {
     "filter": "cryo-regisvine",
     "base": {
-      "marker": true,
-      "key": "cryo-regisvine"
+      "marker": true
     },
     "done": {
-      "marker": true,
-      "key": "cryo-regisvine"
+      "marker": true
     }
   },
   "data": [
     {
-      "coordinates": [-28.04289, 69.46655],
-      "id": "86AD7EEB2AD471F3F5C0B76D278CA7E16909FF1D",
+      "coordinates": [-20.88906, 49.54844],
+      "id": "1F1F62D01108ACAFFC2899DBC949C8111BC9417D",
       "importIds": {
         "gm_legacy": ["mondstadtCryoRegisvine/1"]
       },

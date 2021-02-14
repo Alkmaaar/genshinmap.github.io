@@ -2,7 +2,8 @@
   "format": 2,
   "name": {
     "en": "Statue of the Seven",
-    "ru": "Статуя семи Архонтов"
+    "ru": "Статуя семи Архонтов",
+    "pt": "Estátua dos Sete"
   },
   "description": {
     "en": "Teleport here to receive healing or redeem elemental Oculi for rewards."
@@ -31,8 +32,8 @@
   },
   "data": [
     {
-      "coordinates": [-39.26572, 60.05075],
-      "id": "9D7B5E84ECBF41F751DD353233F67BF58DFC35FE",
+      "coordinates": [-30.50573, 42.85276],
+      "id": "71677AB218A4FA8B10736C65AC8DDF21AE62C28E",
       "importIds": {
         "gm_legacy": ["dragonspineStatue/1"]
       },

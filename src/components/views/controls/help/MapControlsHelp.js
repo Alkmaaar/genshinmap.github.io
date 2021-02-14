@@ -1,24 +1,53 @@
 /**
- * Provides the view which displays the About > Help tab of the map controls.
+ * Provides the view which displays the Help tab of the map controls.
  */
-
+import { makeStyles } from '@material-ui/core';
 import React from 'react';
 import { connect } from 'react-redux';
+import { getMarkerCount, getRouteCount } from '~/components/data/MapFeatures';
 
-import { t } from '~/components/i18n/Localization';
+import { t, f } from '~/components/i18n/Localization';
 import BorderBox from '~/components/interface/BorderBox';
+import { TabBar, TabView } from '~/components/interface/Tabs';
 import { SafeHTML } from '~/components/Util';
+import MapControlsChangelog from './MapControlsChangelog';
+
+const TABS = [
+  { enabled: true, order: 11, label: t('map-controls-tab-changelog'), value: 'changelog' },
+  { enabled: true, order: 12, label: t('map-controls-tab-help'), value: 'help' },
+];
+
+const useStyles = makeStyles((_theme) => ({
+  tabBar: {
+    margin: 0,
+    marginBottom: 8,
+  },
+}));
 
 const _MapControlsHelp = ({ displayed }) => {
+  const [helpTab, setHelpTab] = React.useState('changelog');
+  const classes = useStyles();
+
   return (
-    <BorderBox displayed={displayed} overflow="hidden auto">
-      <SafeHTML gutterBottom>{t('map-about-help-content-a')}</SafeHTML>
-      <SafeHTML gutterBottom>{t('map-about-help-content-b')}</SafeHTML>
-      <SafeHTML gutterBottom>{t('map-about-help-content-c')}</SafeHTML>
-      <SafeHTML gutterBottom>{t('map-about-help-content-d')}</SafeHTML>
-      <SafeHTML gutterBottom>{t('map-about-help-content-e')}</SafeHTML>
-      <SafeHTML>{t('map-about-help-content-f')}</SafeHTML>
-    </BorderBox>
+    <TabView displayed={displayed}>
+      <TabBar value={helpTab} onChange={setHelpTab} tabs={TABS} className={classes.tabBar} />
+      <MapControlsChangelog displayed={helpTab === 'changelog'} />
+      <BorderBox displayed={helpTab === 'help'} overflow="hidden auto">
+        <SafeHTML gutterBottom>
+          {f('map-about-help-content-a', { markers: getMarkerCount(), routes: getRouteCount() })}
+        </SafeHTML>
+
+        <SafeHTML gutterBottom>{t('map-about-help-content-b')}</SafeHTML>
+
+        <SafeHTML gutterBottom>{t('map-about-help-content-c')}</SafeHTML>
+
+        <SafeHTML gutterBottom>{t('map-about-help-content-d')}</SafeHTML>
+
+        <SafeHTML gutterBottom>{t('map-about-help-content-e')}</SafeHTML>
+
+        <SafeHTML>{t('map-about-help-content-f')}</SafeHTML>
+      </BorderBox>
+    </TabView>
   );
 };
 

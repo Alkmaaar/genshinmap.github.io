@@ -1,6 +1,7 @@
 {
   "format": 2,
   "name": {
+    "pt": "Domínio",
     "en": "Domain",
     "ru": "Подземелья"
   },
@@ -31,8 +32,8 @@
   },
   "data": [
     {
-      "coordinates": [-40.83257, 57.14145],
-      "id": "3710A403C350DB2237BEDEEC88C90CB9536F3762",
+      "coordinates": [-31.96138, 40.78392],
+      "id": "C29ED2244FF28ED05E5AB775B01AB7E094D15397",
       "importIds": {
         "gm_legacy": ["dragonspineDomain/1"]
       },

@@ -1,12 +1,15 @@
 {
   "name": "genshin-map",
-  "version": "0.10.2",
+  "version": "0.10.8",
   "license": "GPL-3.0",
   "homepage": "https://genshinmap.github.io/",
   "bugs": {
     "url": "https://github.com/GenshinMap/genshinmap.github.io/issues"
   },
   "scripts": {
+    "preinstall": "yarn policies set-version 1.22.10",
+    "install:dev": "yarn install --prod=false",
+    "install:prod": "yarn install --prod=true",
     "start:dev": "npx react-app-rewired start",
     "start:prod": "npx serve -s build",
     "build": "npx react-app-rewired build",
@@ -34,10 +37,12 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "@react-leaflet/core": "https://gitpkg.now.sh/MasterEric/react-leaflet/packages/core?dist",
     "@reduxjs/toolkit": "^1.4.0",
     "axios": "^0.21.0",
     "clipboard-polyfill": "^3.0.1",
     "clsx": "^1.1.1",
+    "googleapis": "^67.0.0",
     "joi": "^17.3.0",
     "leaflet": "github:MasterEric/Leaflet#dist",
     "leaflet-draw": "^1.0.4",
@@ -52,8 +57,9 @@
     "react-dropzone": "^11.2.4",
     "react-helmet-async": "^1.0.7",
     "react-lazy-load-image-component": "^1.5.0",
-    "react-leaflet": "^3.0.4",
+    "react-leaflet": "https://gitpkg.now.sh/MasterEric/react-leaflet/packages/react-leaflet?dist",
     "react-leaflet-markercluster": "^3.0.0-rc1",
+    "react-leaflet-textpath": "^2.0.0",
     "react-localization": "^1.0.15",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.0",
@@ -61,7 +67,8 @@
     "react-tooltip": "^4.2.10",
     "react-world-flags": "^1.4.0",
     "redux": "^4.0.5",
-    "sanitize-html": "^2.1.2"
+    "sanitize-html": "^2.1.2",
+    "sourcemapped-stacktrace": "^1.1.11"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.12.1",
@@ -80,8 +87,14 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.0",
+    "jsonc-loader": "^0.1.1",
     "prettier": "^2.1.2",
     "react-app-rewired": "^2.1.8",
+    "react-dev-utils": "^11.0.1",
     "serve": "^11.3.2"
+  },
+  "resolutions": {
+    "@react-leaflet/core": "https://gitpkg.now.sh/MasterEric/react-leaflet/packages/core?dist",
+    "react-leaflet": "https://gitpkg.now.sh/MasterEric/react-leaflet/packages/react-leaflet?dist"
   }
 }

@@ -1,13 +1,17 @@
 {
+  "format": 2,
+  "description": {
+    "en": "A gorgeous porcelain chest framed with gold. Contains powerful rewards.",
+    "ru": "Прекрасный фарфоровый сундук обрамленный золотом. Содержит мощную награду."
+  },
   "name": {
     "en": "Luxurious Chest",
-    "ru": "Роскошный сундук"
-  },
-  "description": {
-    "en": "A gorgeous porcelain chest framed with gold. Contains powerful rewards."
+    "ru": "Роскошный сундук",
+    "pt": "Baú Luxuoso"
   },
   "enabled": false,
-  "cluster": false,
+  "cluster": "on",
+  "respawn": "none",
   "icons": {
     "filter": "luxurious-chest",
     "base": {
@@ -19,21 +23,19 @@
   },
   "data": [
     {
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-41.17451935556444, 66.29699707031251]
+      "coordinates": [-32.28359, 47.29453],
+      "id": "1A60390E10CB97E93F80E691D6B727764ADB7F1C",
+      "importIds": {
+        "gm_legacy": ["dragonspineLuxuriousChest/15"]
       },
-      "type": "Feature",
-      "properties": {
-        "popupTitle": {
-          "en": "Luxurious Chest"
-        },
-        "popupContent": {
-          "en": "Break the Scarlet Quartz on the north cliff in Mondstadt, glide over, and break the ice to reveal the chest. Contains Crimson Agate."
-        },
-        "popupMedia": "https://www.youtube.com/watch?v=6ydUPk7fF-A"
+      "popupAttribution": "Unknown",
+      "popupTitle": {
+        "en": "Luxurious Chest"
       },
-      "id": 15
+      "popupContent": {
+        "en": "Break the Scarlet Quartz on the north cliff in Mondstadt, glide over, and break the ice to reveal the chest. Contains Crimson Agate."
+      },
+      "popupMedia": "https://www.youtube.com/watch?v=6ydUPk7fF-A"
     }
   ]
 }

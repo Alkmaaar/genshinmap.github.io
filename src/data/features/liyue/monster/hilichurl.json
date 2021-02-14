@@ -1,12 +1,16 @@
 {
+  "format": 2,
+  "description": {
+    "en": "Basic Hilichurls who attack with claws or clubs. Drops Stained Masks.",
+    "ru": "Примитивные человекообразные монстры, атакующие дубинами или когтями. Возможные награды: Окрашенные Маски."
+  },
+  "enabled": true,
+  "cluster": "on",
   "name": {
     "en": "Hilichurl",
+    "pt": "Hilichurl",
     "ru": "Хиличурл"
   },
-  "description": {
-    "en": "Basic Hilichurls who attack with claws or clubs. Drops Stained Masks."
-  },
-  "cluster": true,
   "respawn": 86400,
   "icons": {
     "filter": "hilichurl",
@@ -19,26 +23,20 @@
   },
   "data": [
     {
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-41.7338100826, 42.6312181156]
+      "coordinates": [-32.81425, 30.46553],
+      "id": "95C9BA2C5CC5AEEF121CFB1C04B4DFAFD7A2F7AA",
+      "importIds": {
+        "gm_legacy": ["liyueHilichurl/1"]
       },
-      "type": "Feature",
-      "properties": {
-        "popupMedia": ""
-      },
-      "id": 1
+      "popupAttribution": "Unknown"
     },
     {
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-37.4305196813, 40.5057578919]
+      "coordinates": [-28.84153, 28.9541],
+      "id": "10095D38CEEC0B6BEE050CFF5B3B42FB2CA3C663",
+      "importIds": {
+        "gm_legacy": ["liyueHilichurl/2"]
       },
-      "type": "Feature",
-      "properties": {
-        "popupMedia": ""
-      },
-      "id": 2
+      "popupAttribution": "Unknown"
     }
   ]
 }

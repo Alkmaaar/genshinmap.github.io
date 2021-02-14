@@ -1,35 +1,42 @@
 {
-  "name": { "en": "Bamboo Shoots" },
+  "format": 2,
+  "description": {
+    "en": "Efficient route to collect Bamboo Shoots."
+  },
+  "enabled": true,
+  "name": {
+    "en": "Bamboo Shoots",
+    "pt": "Brotos de Bambu"
+  },
   "icons": {
     "filter": "bamboo-shoot"
   },
   "data": [
     {
-      "id": 1,
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [-35.13787911963419, 32.87658691406251],
-          [-34.48844783780931, 32.72277832031251],
-          [-34.366110728831174, 32.47009277343751],
-          [-34.089061315849946, 32.34924316406251],
-          [-34.04355650412745, 32.72277832031251],
-          [-33.811102288647014, 32.74475097656251],
-          [-33.674068533741966, 32.34924316406251],
-          [-33.50933936780059, 32.75573730468751],
-          [-32.98102014898148, 32.83264160156251],
-          [-32.828827094089085, 32.75024414062501],
-          [-32.64400044827676, 32.38769531250001],
-          [-32.25926542645934, 32.31079101562501]
-        ]
+      "coordinates": [
+        [-26.81875, 23.52891],
+        [-26.25625, 23.41953],
+        [-26.15078, 23.23984],
+        [-25.9125, 23.1539],
+        [-25.87344, 23.41953],
+        [-25.67422, 23.43516],
+        [-25.55703, 23.1539],
+        [-25.41641, 23.44297],
+        [-24.96719, 23.49766],
+        [-24.83828, 23.43906],
+        [-24.68203, 23.18125],
+        [-24.35782, 23.12656]
+      ],
+      "id": "1B0171158585135DF92283F94319A1A3702D4EFC",
+      "importIds": {
+        "gm_legacy": ["liyueBambooShoot/1"]
       },
-      "type": "Feature",
-      "properties": {
-        "popupTitle": { "en": "Bamboo Shoots" },
-        "popupContent": {
-          "en": "Follow the forest path, then head across the bridge and behind the house, collecting the marked bamboo shoots."
-        },
-        "popupMedia": ""
+      "popupAttribution": "MasterEric",
+      "popupTitle": {
+        "en": "Bamboo Shoots"
+      },
+      "popupContent": {
+        "en": "Follow the forest path, then head across the bridge and behind the house, collecting the marked bamboo shoots."
       }
     }
   ]

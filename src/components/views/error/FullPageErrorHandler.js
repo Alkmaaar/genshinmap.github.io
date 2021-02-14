@@ -14,16 +14,19 @@ import {
   Grid,
   Typography,
   makeStyles,
+  Collapse,
+  IconButton,
 } from '@material-ui/core';
+import { ExpandLess as ExpandLessIcon, ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { t } from '~/components/i18n/Localization';
 import { Image } from '~/components/interface/Image';
-import { openURLInWindow } from '~/components/Util';
+import { applySourcemapToStackTrace, openURLInWindow } from '~/components/Util';
 import { generateReportURL } from '~/components/views/error/ErrorReport';
 
-const iconPNG = require('~/images/brainjuice.png').default;
-const iconWEBP = require('~/images/brainjuice.webp').default;
+const iconPNG = require('../../../images/brainjuice.png').default;
+const iconWEBP = require('../../../images/brainjuice.webp').default;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -69,19 +72,24 @@ const FullPageErrorHandler = ({ error, errorInfo }) => {
 
   const classes = useStyles();
 
-  let componentStack = (errorInfo?.componentStack ?? 'NO COMPONENT STACK').trim();
+  const untranslatedStack = (errorInfo?.componentStack ?? '').trim();
 
-  if (error.detail) {
-    componentStack += `\n---DETAIL---\n${error.detail}`;
-  }
-  if (error.original) {
-    componentStack += `\n---ORIGINAL---\n`;
-    componentStack += `${error.original.name}: ${error.original.message}\n`;
-    componentStack += `${error.original.stack}`;
-  }
+  const [componentStack, setComponentStack] = React.useState(null);
+
+  const [errorExpanded, setErrorExpanded] = React.useState(false);
+  const toggleErrorExpanded = () => setErrorExpanded((value) => !value);
+
+  React.useEffect(async () => {
+    if (untranslatedStack !== '') {
+      const stack = await applySourcemapToStackTrace(untranslatedStack);
+      setComponentStack(stack);
+    }
+  }, [untranslatedStack]);
 
   const onSubmitError = () => {
-    openURLInWindow(generateReportURL(error.name, error.message, componentStack));
+    if (componentStack != null) {
+      openURLInWindow(generateReportURL(error.name, error.message, componentStack));
+    }
   };
 
   return (
@@ -108,10 +116,28 @@ const FullPageErrorHandler = ({ error, errorInfo }) => {
             </Grid>
             <Grid item xs={12}>
               <Card>
-                <CardHeader title={`${error.name}: ${error.message}`} />
-                <CardContent>
-                  <pre className={classes.codeBox}>{componentStack}</pre>
-                </CardContent>
+                <CardHeader
+                  title={`${error.name}: ${error.message}`}
+                  action={
+                    <IconButton aria-label="settings" onClick={toggleErrorExpanded}>
+                      {errorExpanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                    </IconButton>
+                  }
+                />
+                {componentStack !== '' ? (
+                  <CardContent>
+                    <Collapse in={errorExpanded}>
+                      <pre className={classes.codeBox}>{componentStack}</pre>
+                    </Collapse>
+                  </CardContent>
+                ) : (
+                  <CardContent>
+                    <Collapse in={errorExpanded}>
+                      <pre className={classes.codeBox}>{componentStack}</pre>
+                    </Collapse>
+                  </CardContent>
+                )}
+
                 <CardActions>
                   <Button
                     onClick={onSubmitError}

@@ -12,12 +12,10 @@
   "icons": {
     "filter": "snowboar-king",
     "base": {
-      "marker": true,
-      "key": "snowboar-king"
+      "marker": true
     },
     "done": {
-      "marker": true,
-      "key": "snowboar-king"
+      "marker": true
     }
   },
   "data": []

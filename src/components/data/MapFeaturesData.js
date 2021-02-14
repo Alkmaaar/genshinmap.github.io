@@ -6,7 +6,9 @@ import Joi from 'joi';
 import L from 'leaflet';
 import _ from 'lodash';
 
-import { MDF_FEATURE_SCHEMA } from '~/components/data/MarkerDataFormatSchema';
+import { MSF_FEATURE_SCHEMA, MSF_ROUTES_SCHEMA } from '~/components/data/MarkerDataFormatSchema';
+import { BLANK_IMAGE } from '../interface/Image';
+import { importFromContext } from '../Util';
 
 const localizedField = Joi.object().pattern(/[-a-zA-Z0-9]+/, Joi.string().allow(''));
 
@@ -87,7 +89,7 @@ const markerStyle = Joi.object({
     .when('marker', { is: false, then: Joi.optional(), otherwise: Joi.forbidden() }), // Optional but allowed if marker = false. Otherwise forbidden.
 });
 
-const MAP_FEATURE_SCHEMA = Joi.object({
+const LEGACY_FEATURE_SCHEMA = Joi.object({
   name: localizedField.required(),
   description: localizedField.optional(),
   cluster: Joi.boolean(),
@@ -105,7 +107,7 @@ const MAP_FEATURE_SCHEMA = Joi.object({
     .unique((a, b) => a.id === b.id), // IDs must be unique.
 });
 
-const MAP_ROUTE_SCHEMA = Joi.object({
+const LEGACY_ROUTE_SCHEMA = Joi.object({
   name: localizedField.required(),
   enabled: Joi.boolean().optional().default(true),
   icons: {
@@ -133,12 +135,19 @@ const VALIDATION_OPTIONS = {
 };
 
 export const validateFeatureData = (input) => {
+  if (input == null) {
+    console.error(`Feature is undefined!`);
+    return null;
+  }
   switch (input.format) {
     case 2:
-      return MDF_FEATURE_SCHEMA.validate(input, { convert: true });
+      return MSF_FEATURE_SCHEMA.validate(input, { convert: true });
     case 1:
     default:
-      return MAP_FEATURE_SCHEMA.validate(input, { convert: true });
+      console.error(
+        `Feature (${JSON.stringify(input.name)}) using outdated MSF version: ${input.format}`
+      );
+      return null;
   }
 };
 
@@ -147,15 +156,29 @@ export const validateFeatureData = (input) => {
  * If not valid, validation.error contains the error data.
  */
 export const validateRouteData = (input) => {
-  return MAP_ROUTE_SCHEMA.validate(input, { convert: true });
+  if (input == null) {
+    console.error(`Route is undefined!`);
+    return null;
+  }
+  switch (input.format) {
+    case 2:
+      return MSF_ROUTES_SCHEMA.validate(input, { convert: true });
+    case 1:
+    default:
+      console.error(
+        `Route (${JSON.stringify(input.name)}) using outdated MSF version: ${input.format}`
+      );
+      return null;
+  }
 };
 
-const featuresContext = require.context('../../data/features/', true, /.json$/);
+const featuresContext = require.context('../../data/features/', true, /.jsonc?$/);
 export const listFeatureKeys = () => featuresContext.keys();
 export const loadFeature = (key) => {
-  const featureData = featuresContext(key);
+  const featureData = importFromContext(featuresContext, key);
+
   const validation = validateFeatureData(featureData);
-  if (validation.error) {
+  if (validation == null || validation.error) {
     console.warn(`ERROR during validation of feature '${key}'`);
     console.warn(validation);
     return null;
@@ -163,12 +186,13 @@ export const loadFeature = (key) => {
   return validation.value;
 };
 
-const routesContext = require.context('../../data/routes/', true, /.json$/);
+const routesContext = require.context('../../data/routes/', true, /.jsonc?$/);
 export const listRouteKeys = () => routesContext.keys();
 export const loadRoute = (key) => {
-  const routeData = routesContext(key);
+  const routeData = importFromContext(routesContext, key);
+
   const validation = validateRouteData(routeData);
-  if (validation.error) {
+  if (validation == null || validation.error) {
     console.warn(`ERROR during validation of route '${key}'`);
     console.warn(validation);
     return null;
@@ -191,7 +215,12 @@ export const createGeoJSONLayer = (dataJSON) => {
 
 // https://github.com/cyrilwanner/next-optimized-images/issues/16
 const iconsContext = require.context('../../images/icons', true, /\.(png|webp|svg)/);
-export const getFilterIconURL = (key, ext) => iconsContext(`./filter/${key}.${ext}`).default;
+export const getFilterIconURL = (key, ext) => {
+  if (key && key !== 'none') {
+    return importFromContext(iconsContext, `./filter/${key}.${ext}`);
+  }
+  return BLANK_IMAGE;
+};
 
 export const createMapIcon = ({
   key,
@@ -208,8 +237,10 @@ export const createMapIcon = ({
     // This part is a little complex.
     // As a neat hack, the marker"s shadow is offset and used to implement the frame.
     // That way, the marker can be a separate icon from the image representing the item.
-    const shadowUrl = iconsContext(`./marker/marker_${done ? 'green' : 'white'}_bg.svg`, true)
-      .default;
+    const shadowUrl = importFromContext(
+      iconsContext,
+      `./marker/marker_${done ? 'green' : 'white'}_bg.svg`
+    );
 
     const iconHTML = `<div class='map-marker-container'>
       <img style='width: 40px; height: 40px;' class='map-marker-shadow' alt="" src="${shadowUrl}"/>
@@ -228,10 +259,10 @@ export const createMapIcon = ({
   }
 
   // Else, don't use the marker image.
-  const iconUrl = iconsContext(`./map/${key}.${ext}`, true).default;
+  const iconUrl = importFromContext(iconsContext, `./map/${key}.${ext}`);
 
   // Handle the niche case where cluster = true and marker = false.
-  const clusterIconUrl = clusterIcon !== '' ? getFilterIconURL(clusterIcon, ext) : undefined;
+  const clusterIconUrl = getFilterIconURL(clusterIcon, ext);
 
   return L.icon({
     className: `map-marker-${key}`,

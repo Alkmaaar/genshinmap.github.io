@@ -46,10 +46,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const _MapControlsEditorMarker = ({
-  index,
-  markerTitle,
-  markerContent,
-  markerMedia,
+  marker,
   highlightMarker,
   setMarkerTitle,
   setMarkerContent,
@@ -57,6 +54,11 @@ const _MapControlsEditorMarker = ({
   deleteMarker,
 }) => {
   const classes = useStyles();
+
+  const markerId = marker?.id ?? '';
+  const markerTitle = marker?.popupTitle?.en ?? '';
+  const markerContent = marker?.popupContent?.en ?? '';
+  const markerMedia = marker?.popupMedia ?? '';
 
   return (
     <Box display="flex" flexDirection="column" className={classes.markerBox}>
@@ -68,7 +70,7 @@ const _MapControlsEditorMarker = ({
         </Tooltip>
 
         <Typography className={classes.markerLabel}>
-          {f('editor-elements-marker-id', { id: index + 1 })}
+          {f('editor-elements-marker-id', { id: markerId.substring(0, 7) })}
         </Typography>
 
         <Tooltip title={t('editor-delete-tooltip')}>
@@ -98,19 +100,22 @@ const _MapControlsEditorMarker = ({
 
 const mapStateToProps = (state, { marker }) => ({
   highlighted: state.editorHighlight === marker.id,
-  markerTitle: marker.properties.popupTitle.en,
-  markerContent: marker.properties.popupContent.en,
-  markerMedia: marker.properties.popupMedia,
 });
 const mapDispatchToProps = (dispatch, { marker }) => ({
   setMarkerTitle: (value) => {
-    dispatch(setElementProperty(marker, 'properties.popupTitle.en', value));
+    if (value !== _.get(marker, 'popupTitle.en')) {
+      dispatch(setElementProperty(marker.id, 'popupTitle.en', value));
+    }
   },
   setMarkerContent: (value) => {
-    dispatch(setElementProperty(marker, 'properties.popupContent.en', value));
+    if (value !== _.get(marker, 'popupContent.en')) {
+      dispatch(setElementProperty(marker.id, 'popupContent.en', value));
+    }
   },
   setMarkerMedia: (value) => {
-    dispatch(setElementProperty(marker, 'properties.popupMedia', value));
+    if (value !== _.get(marker, 'popupMedia')) {
+      dispatch(setElementProperty(marker.id, 'popupMedia', value));
+    }
   },
 
   deleteMarker: () => dispatch(removeElement(marker)),
@@ -122,8 +127,8 @@ const mapDispatchToProps = (dispatch, { marker }) => ({
     dispatch(
       setPositionAndZoom(
         {
-          lat: marker.geometry.coordinates[0],
-          lng: marker.geometry.coordinates[1],
+          lat: marker?.coordinates[0],
+          lng: marker?.coordinates[1],
         },
         HIGHLIGHT_ZOOM_LEVEL
       )

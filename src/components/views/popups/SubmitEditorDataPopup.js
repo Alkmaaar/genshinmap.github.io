@@ -6,7 +6,6 @@
 import {
   MenuItem,
   Select,
-  Switch,
   Button,
   Dialog,
   DialogContent,
@@ -16,7 +15,6 @@ import {
   FormControl,
   InputLabel,
   Typography,
-  Box,
 } from '@material-ui/core';
 import React, { useState } from 'react';
 
@@ -25,7 +23,7 @@ import MapRegions from '~/components/data/MapRegions';
 import { t } from '~/components/i18n/Localization';
 import { SafeHTML } from '~/components/Util';
 import BorderBox from '~/components/interface/BorderBox';
-import { InputTextField } from '~/components/interface/Input';
+import { InputTextArea, InputTextField } from '~/components/interface/Input';
 import DialogTitle from '~/components/views/popups/DialogTitle';
 
 const useStyles = makeStyles({
@@ -45,9 +43,9 @@ const useStyles = makeStyles({
 
 const SubmitEditorDataPopup = ({ trigger, onConfirm }) => {
   const [submissionName, setSubmissionName] = React.useState('');
+  const [submissionDescription, setSubmissionDescription] = React.useState('');
   const [submissionRegion, setSubmissionRegion] = React.useState('');
   const [submissionCategory, setSubmissionCategory] = React.useState('');
-  const [clusterMarkers, setClusterMarkers] = React.useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const classes = useStyles();
 
@@ -69,12 +67,17 @@ const SubmitEditorDataPopup = ({ trigger, onConfirm }) => {
     if (!isValid()) return;
 
     onConfirm({
+      format: 2,
+      enabled: true,
+      respawn: 'none',
       name: {
         en: submissionName,
       },
-      region: submissionRegion.value,
-      category: submissionCategory.value,
-      cluster: clusterMarkers,
+      description: {
+        en: submissionDescription,
+      },
+      region: submissionRegion,
+      category: submissionCategory,
       icons: {
         filter: 'none',
         base: {
@@ -116,6 +119,13 @@ const SubmitEditorDataPopup = ({ trigger, onConfirm }) => {
               onChange={setSubmissionName}
               className={classes.formField}
             />
+            <InputTextArea
+              rows={3}
+              value={submissionDescription}
+              label={t('popup-submit-editor-data-description')}
+              onChange={setSubmissionDescription}
+              className={classes.formField}
+            />
             <FormControl className={classes.formField}>
               <InputLabel>{t('popup-submit-editor-data-category')}</InputLabel>
               <Select
@@ -144,25 +154,6 @@ const SubmitEditorDataPopup = ({ trigger, onConfirm }) => {
             </FormControl>
             <Typography className={classes.subtitle} gutterBottom>
               {t('popup-submit-editor-data-subtitle-a')}
-            </Typography>
-            <Box
-              className={classes.formField}
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
-            >
-              <Typography className={classes.label} flexGrow={1}>
-                {t('popup-submit-editor-data-cluster-markers')}
-              </Typography>
-              <Switch
-                size="small"
-                color="primary"
-                onChange={(event) => setClusterMarkers(event.target.checked)}
-                checked={clusterMarkers}
-              />
-            </Box>
-            <Typography className={classes.subtitle} gutterBottom>
-              {t('popup-submit-editor-data-subtitle-b')}
             </Typography>
           </BorderBox>
         </DialogContent>
