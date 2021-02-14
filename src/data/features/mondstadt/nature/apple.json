@@ -7,7 +7,8 @@
     "ru": "Яблоко"
   },
   "description": {
-    "en": "Crisp and fragrant. Restore 300 HP or use in Recipes."
+    "en": "Crisp and fragrant. Restore 300 HP or use in Recipes.", 
+    "ru": "Ароматное и хрустящее. Восстанавливает 300 HP или используется в Рецептах."
   },
   "enabled": true,
   "cluster": "on",
