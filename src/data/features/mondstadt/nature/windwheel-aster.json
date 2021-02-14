@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "A plant that adores the wind. Used in Character Ascension."
+    "en": "A plant that adores the wind. Used in Character Ascension.", 
+    "ru": "Растение, которое больше всего на свете любит ветер. Жители Мондштада, гордый народ ветров, также называют ветряные астры ветром, который можно увидеть. Используется в Возвышении персонажей."
   },
   "enabled": true,
   "cluster": "on",
