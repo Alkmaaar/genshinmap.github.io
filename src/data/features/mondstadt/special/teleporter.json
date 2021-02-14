@@ -6,7 +6,8 @@
     "pt": "Ponto de Teleporte"
   },
   "description": {
-    "en": "Activate to gain the ability to move here at will via the World Map."
+    "en": "Activate to gain the ability to move here at will via the World Map.", 
+    "ru": "Активируйте для получения способности переместиться сюда по желанию через карту мира."
   },
   "enabled": true,
   "cluster": "off",
