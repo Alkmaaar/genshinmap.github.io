@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "A tiny seed that rides on the wind. Used in Alchemy and Character Ascension."
+    "en": "A tiny seed that rides on the wind. Used in Alchemy and Character Ascension.", 
+    "ru": "Крошечные семена, парящие на ветр. Даже без своих мнимых крыльев они продолжают мечтать о дальних краях. Используется в Алхимии и для Возвышения персонажей."
   },
   "enabled": true,
   "cluster": "on",
