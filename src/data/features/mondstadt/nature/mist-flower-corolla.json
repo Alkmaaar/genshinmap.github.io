@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "A flower bud encased in solid ice. Harvest using Pyro skills. Used in Alchemy."
+    "en": "A flower bud encased in solid ice. Harvest using Pyro skills. Used in Alchemy.", 
+    "ru": "Цветок, скованным в вечном льду. Даже буду сорванным, этот цветок испускает холод. Можно собрать используя Пиро умения. Используется в Алхимии."
   },
   "enabled": true,
   "cluster": "on",
