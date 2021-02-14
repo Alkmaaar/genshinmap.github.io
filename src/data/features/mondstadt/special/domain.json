@@ -44,10 +44,12 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Eagle's Gate"
+        "en": "Eagle's Gate", 
+        "ru": "Врата Орла."
       },
       "popupContent": {
-        "en": "This is a one-time domain."
+        "en": "This is a one-time domain.", 
+        "ru": "Это подземелье можно посетить лишь один раз."
       },
       "popupMedia": "mondstadt/domain/eagles-gate"
     },
@@ -63,10 +65,12 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Temple of the Lion"
+        "en": "Temple of the Lion", 
+        "ru": "Храм Льва"
       },
       "popupContent": {
-        "en": "This is a one-time domain."
+        "en": "This is a one-time domain.", 
+        "ru": "Здесь можно пройти испытания элементальных реакций."
       },
       "popupMedia": "mondstadt/domain/temple-of-the-lion"
     },
@@ -82,10 +86,12 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Temple of the Falcon"
+        "en": "Temple of the Falcon", 
+        "ru": "Храм Сокола"
       },
       "popupContent": {
-        "en": "This is a one-time domain."
+        "en": "This is a one-time domain.", 
+        "ru": "Это подземелье можно посетить лишь один раз."
       },
       "popupMedia": "mondstadt/domain/temple-of-the-falcon"
     },
@@ -101,10 +107,12 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Temple of the Wolf"
+        "en": "Temple of the Wolf", 
+        "ru": "Храм Волка"
       },
       "popupContent": {
-        "en": "This is a one-time domain."
+        "en": "This is a one-time domain.", 
+        "ru": "Это подземелье можно посетить лишь один раз."
       },
       "popupMedia": "mondstadt/domain/temple-of-the-wolf"
     },
@@ -120,10 +128,12 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Midsummer Courtyard"
+        "en": "Midsummer Courtyard", 
+        "ru": "Июльские сады"
       },
       "popupContent": {
-        "en": "This Artifact domain drops the Thunderfury, Thundersoother, and Resolution of Sojourner sets."
+        "en": "This Artifact domain drops the Thunderfury, Thundersoother, and Resolution of Sojourner sets.", 
+        "ru": "В данном подземелье можно выбить артефакты из наборов: Усмиряющий гром, Громогласный рёв ярости и Решимость временщика."
       },
       "popupMedia": "mondstadt/domain/midsummer-courtyard"
     },
@@ -139,10 +149,12 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Valley of Remembrance"
+        "en": "Valley of Remembrance", 
+        "ru": "Долина воспоминаний"
       },
       "popupContent": {
-        "en": "This Artifact domain drops the Viridescent Venerer, Maiden Beloved, and Tiny Miracle sets."
+        "en": "This Artifact domain drops the Viridescent Venerer, Maiden Beloved, and Tiny Miracle sets.", 
+        "ru": "В данном подземелье можно выбить артефакты из наборов: Возлюбленная юная дева, Изумрудная тень и Маленькое чудо."
       },
       "popupMedia": "mondstadt/domain/valley-of-remembrance"
     },
@@ -158,10 +170,12 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Forsaken Rift"
+        "en": "Forsaken Rift", 
+        "ru": "Забытый каньон"
       },
       "popupContent": {
-        "en": "This domain drops Talent level-up materials."
+        "en": "This domain drops Talent level-up materials.", 
+        "ru": "В этом подземелье можно выбить материалы для повышения уровня Талантов."
       },
       "popupMedia": "mondstadt/domain/forsaken-rift"
     },
@@ -177,10 +191,12 @@
       },
       "popupAttribution": "MasterEric",
       "popupTitle": {
-        "en": "Cecilia Garden"
+        "en": "Cecilia Garden", 
+        "ru": "Сады Сесилиии"
       },
       "popupContent": {
-        "en": "This domain drops Weapon ascension materials. Guide the four Seelies in this area to their gardens to unlock the Anemo pillar, then activate that to open the domain."
+        "en": "This domain drops Weapon ascension materials. Guide the four Seelies in this area to their gardens to unlock the Anemo pillar, then activate that to open the domain.", 
+        "ru": "В этом подземелье можно выбить материалы для возвышения оружия. Сопроводите четыре Феи в этой области в их сады чтобы открыть Анемо колонну, после этого активируйте её, чтобы разблкоировать подезмелье. "
       },
       "popupMedia": "mondstadt/domain/cecilia-garden"
     }
