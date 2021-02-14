@@ -6,7 +6,8 @@
     "ru": "Закатник"
   },
   "description": {
-    "en": "A plump fruit abundant across Teyvat. Used to craft Jam for Recipes."
+    "en": "A plump fruit abundant across Teyvat. Used to craft Jam for Recipes.", 
+    "ru": "Фрукт-пухляш, оранжевый как закатное солнце. Встречается в изобилии по всему Тейвату. Сытный фрукт с необычным вкусом. Используется в различных Рецептах, а также как средство пищи, восстанавливает 300 HP. "
   },
   "enabled": true,
   "cluster": "on",
