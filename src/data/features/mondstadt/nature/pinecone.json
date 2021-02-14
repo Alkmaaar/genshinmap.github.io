@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "Filled with oil-rich seeds. Used in Recipes."
+    "en": "Filled with oil-rich seeds. Used in Recipes.", 
+    "ru": "Семена из сосновой шишки богаты натуральными маслами. Местные разрушители легед доказали, что сосна не может вырасти из шишки у белки в животе. Используется в Рецептах."
   },
   "enabled": true,
   "cluster": "on",
