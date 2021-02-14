@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "A shelled creature that lives near the ocean. Used for high-rarity Recipes."
+    "en": "A shelled creature that lives near the ocean. Used for high-rarity Recipes.", 
+    "ru": "Ракообразные, которые обитают у берегов океана. Из их нежного мяса получаются замечательные блюда. Используется в Рецептах высокого качества."
   },
   "enabled": true,
   "cluster": "on",
