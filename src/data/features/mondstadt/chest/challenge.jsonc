@@ -100,7 +100,8 @@
       },
       "popupContent": {
         "en": "Previously a common chest in beta, this is now a Challenge pedestal",
-        "zh": "这是一个蒙德宝箱"
+        "zh": "这是一个蒙德宝箱", 
+        "ru": "Ранее обычный сундук в бета, теперь это активируемое Испытание"
       },
       "popupMedia": "mondstadt/challenge/EB7AD15"
     },
@@ -119,7 +120,8 @@
       },
       "popupContent": {
         "en": "Previously a common chest in beta, this is now a Challenge pedestal",
-        "zh": "这是一个完成限时挑战出现的【精致宝箱】"
+        "zh": "这是一个完成限时挑战出现的【精致宝箱】", 
+        "ru": "Ранее обычный сундук в бета, теперь это активируемое Испытание"
       },
       "popupMedia": "mondstadt/challenge/3DA6905"
     },
@@ -137,7 +139,8 @@
       },
       "popupContent": {
         "en": "Previously a common chest in beta, this is now a Challenge pedestal",
-        "zh": "这是一个飞行挑战获得的【精致宝箱】"
+        "zh": "这是一个飞行挑战获得的【精致宝箱】", 
+        "ru": "Ранее обычный сундук в бета, теперь это активируемое Испытание"
       },
       "popupMedia": "mondstadt/challenge/A0A12CE"
     }
