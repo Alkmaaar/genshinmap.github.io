@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "A berry with thorns that often gets attached to a wolf's pelt. Used in Character Ascension."
+    "en": "A berry with thorns that often gets attached to a wolf's pelt. Used in Character Ascension.", 
+    "ru": "Покрытая колючками ягода. Постоянно цепляется за волчью шерсть. Если долдго смотреть на эту ягоду, можно услышать волчий вой. Используется для Возвышения персонажей."
   },
   "enabled": true,
   "cluster": "on",
