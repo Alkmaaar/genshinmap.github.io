@@ -1,7 +1,8 @@
 {
   "format": 2,
   "description": {
-    "en": "A fresh fillet used in many Recipes."
+    "en": "A fresh fillet used in many Recipes.", 
+    "ru": "Свежее филе рыбы. С ним можно приготовить богатое блюдов. Используется в Рецептах."
   },
   "enabled": false,
   "cluster": "off",
